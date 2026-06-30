@@ -49,6 +49,9 @@ document.addEventListener('DOMContentLoaded', async function() {
   }, true);
 
   try {
+    // Artificial delay agar loading state terlihat (dalam ms)
+    await new Promise(resolve => setTimeout(resolve, 2500));
+
     const manifestEl = document.querySelector('script[type="__bundler/manifest"]');
     const templateEl = document.querySelector('script[type="__bundler/template"]');
     if (!manifestEl || !templateEl) {
